@@ -1,5 +1,7 @@
 require "test/unit"
-require "./alphanumeric"
+require "./refinements_in_file"
+
+  using StringExtension
 
   class ToAlphanumericTest < Test::Unit::TestCase 
     def test_strip_non_aplanumeric_chars
