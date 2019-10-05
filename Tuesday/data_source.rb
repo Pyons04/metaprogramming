@@ -26,4 +26,12 @@ class DS
   def get_keybord_price(workstation_id)
     return 55
   end
+
+  def get_display_info(workstation_id)
+    return "large 5.5 inch display"
+  end
+
+  def get_display_price(workstation_id)
+    return 500
+  end
 end
