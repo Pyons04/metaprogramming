@@ -1,8 +1,14 @@
-event "常に発生するイベント" do
- true
+def monthly_sales
+  110
 end
 
-event "絶対に発生しないイベント" do
- false
+target_sales = 100
+
+event "月間売上が高い" do
+  monthly_sales > target_sales
+end
+
+event "月間売上が低い" do
+  monthly_sales < target_sales
 end
 
