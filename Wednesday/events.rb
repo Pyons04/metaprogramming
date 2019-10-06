@@ -1,14 +1,22 @@
-def monthly_sales
-  110
+setup do
+  p "空の高さを設定"
+  @sky_height = 100
 end
 
-target_sales = 100
-
-event "月間売上が高い" do
-  monthly_sales > target_sales
+setup do
+  p "山の高さを設定"
+  @mountain_height = 200
 end
 
-event "月間売上が低い" do
-  monthly_sales < target_sales
+event "空が落ちてくる" do
+  @sky_height < 300
+end
+
+event "空が近づいてくる" do
+  @sky_height < @mountain_height
+end
+
+event "もうだめだ。手遅れ" do
+  @sky_height < 0
 end
 
